@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logo/favicon-32x32.png" type="image/x-icon">
+  <link rel="icon" href="./images/logo/favicon-16x16.png" sizes="16x16" type="image/x-icon">
+
+  <link rel="stylesheet" href="./style_recepie.css">
+  <script src="popup_search.js" defer></script>
+
+</head>
+<body class="recepiebackground">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./images/logo/GreenBite-Logo.png" alt="GreenBite Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./recipes.html">Recipes</a></li>
+      <li><a href="./calculator.html">Calorie Calculator</a></li>
+      <li><a href="./workout.html">Workout Generator</a></li>
+      <li><a href="./mindfulness.html">Mindfulness</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Healthy Recipes</h1>
+
+    <!-- Filter and Search Bar -->
+    <div class="filter-search-bar">
+      <!-- Filter by Category -->
+      <div class="filters">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+      </div>
+
+      <!-- Search by Recipe Name -->
+      <div class="search">
+        <label for="searchInput">Search by Name:</label>
+        <input type="text" id="searchInput" placeholder="Type recipe name...">
+      </div>
+    </div>
+
+    <!-- Recipes Section -->
+    <section class="recipe-section">
+      <h2>Breakfast</h2>
+      <div class="recipe-grid" id="breakfast">
+        <div class="card" data-id="1" data-category="breakfast">
+          <div class="card-image">
+            <img src="./images/recepies/Avocado-Egg-Breakfast-Toast-FI-Thumbnail-1200X1200.jpg" alt="Avocado Toast with Egg">
+            <div class="card-content">
+              <h2>Avocado Toast with Egg</h2>
+              <p>A trendy classic that’s actually good for you! The healthy fats from avocado and protein from the egg make this toast both delicious and nourishing.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="2" data-category="breakfast">
+          <div class="card-image">
+            <img src="./images/recepies/Rosemary-Lemon-Baked-Salmon-with-Asparagus-5.jpg" alt="Salmon with Lemon & Asparagus">
+            <div class="card-content">
+              <h2>Salmon with Lemon & Asparagus</h2>
+              <p>A light yet flavorful dish that combines tender, flaky salmon with crisp-tender asparagus, all roasted in a zesty lemon-garlic marinade. It's rich in omega-3s, quick to prepare, and perfect for a clean, satisfying meal.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="3" data-category="breakfast">
+          <div class="card-image">
+            <img src="./images/recepies/yogurt-bowl-serving.jpg" alt="Greek Yogurt with Nuts & Honey">
+            <div class="card-content">
+              <h2>Greek Yogurt with Nuts & Honey</h2>
+              <p>A creamy, crunchy, naturally sweet breakfast or snack that’s both simple and nourishing. Thick Greek yogurt provides protein and probiotics, while nuts add healthy fats and a satisfying crunch. A drizzle of honey ties it all together with a touch of natural sweetness.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <h2>Lunch</h2>
+      <div class="recipe-grid" id="lunch">
+        <div class="card" data-id="4" data-category="lunch">
+          <div class="card-image">
+            <img src="./images/recepies/chicken.jpeg" alt="Grilled Chicken Salad">
+            <div class="card-content">
+              <h2>Grilled Chicken Salad with Avocado & Balsamic</h2>
+              <p>A fresh, protein-packed salad that's light but filling. Great for meal prep or a quick weekday lunch.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="5" data-category="lunch">
+          <div class="card-image">
+            <img src="./images/recepies/turkeywrAP.jpeg" alt="Turkey & Hummus Wrap">
+            <div class="card-content">
+              <h2>Turkey & Hummus Wrap</h2>
+              <p>A quick and satisfying wrap packed with lean protein and creamy hummus for flavor.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="6" data-category="lunch">
+          <div class="card-image">
+            <img src="./images/recepies/CHICKPEA.jpeg" alt="Chickpea Salad">
+            <div class="card-content">
+              <h2>Chickpea Salad</h2>
+              <p>A hearty plant-based bowl full of fiber and flavor, perfect for vegetarians or anyone looking to go meatless.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <h2>Dinner</h2>
+      <div class="recipe-grid" id="dinner">
+        <div class="card" data-id="7" data-category="dinner">
+          <div class="card-image">
+            <img src="./images/recepies/sweetpotatoe.jpeg" alt="Stuffed Sweet Potatoes">
+            <div class="card-content">
+              <h2>Stuffed Sweet Potatoes with Black Beans and Avocado</h2>
+              <p>Roasted sweet potatoes stuffed with seasoned black beans, fresh veggies, and creamy avocado—a filling and flavorful plant-based meal.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="8" data-category="dinner">
+          <div class="card-image">
+            <img src="./images/recepies/noodle.jpeg" alt="Zucchini Noodles with Pesto and Shrimp">
+            <div class="card-content">
+              <h2>Zucchini Noodles with Pesto and Shrimp</h2>
+              <p>A low-carb pasta alternative using spiralized zucchini, tossed in homemade pesto and topped with grilled shrimp for protein.</p>
+            </div> 
+          </div>
+        </div>
+
+        <div class="card" data-id="9" data-category="dinner">
+          <div class="card-image">
+            <img src="./images/recepies/rice.jpeg" alt="Lentil Stir Fry with Veggies">
+            <div class="card-content">
+              <h2>Lentil Stir Fry with Veggies</h2>
+              <p>A quick and satisfying stir-fry made with hearty lentils, colorful vegetables, and a flavorful soy-ginger sauce, all served over fluffy brown rice. Perfect for a meatless, protein-rich dinner.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for displaying full recipe -->
+    <div id="recipeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalSteps">
+      <div class="modal-content">
+        <button class="close" aria-label="Close recipe modal">&times;</button>
+        <h2 id="modalTitle"></h2>
+
+        <h3>Ingredients</h3>
+        <ul id="modalIngredients"></ul>
+
+        <h3>Steps</h3>
+        <ol id="modalSteps"></ol>
+
+        <h3>Nutrition Info</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Fat</th>
+              <th>Carbs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="modalCalories"></td>
+              <td id="modalProtein"></td>
+              <td id="modalFat"></td>
+              <td id="modalCarbs"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("open");
+    });
+
+    // Optional: Enable keyboard accessibility for hamburger
+    hamburger.addEventListener("keypress", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        hamburger.click();
+      }
+    });
+  </script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest" aria-label="Pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook" aria-label="Facebook"></i></a>
+      </div>
+
+      <div class="page-links">
+        <a href="./home.html">Home</a>
+        <a href="./recipes.html">Recipes</a>
+        <a href="./calculator.html">Calorie Calculator</a>
+        <a href="./mindfulness.html">Mindfulness</a>
+        <a href="./workout.html">Workout Generator</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+
+      <div class="newsletter">
+        <h3>STAY CONNECTED</h3>
+        <form id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="copyright">
+        © 2025 GreenBite. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

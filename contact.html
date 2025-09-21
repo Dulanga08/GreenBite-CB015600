@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBite</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logo/favicon-32x32.png" type="image/x-icon" />
+  <link rel="icon" href="./images/logo/favicon-16x16.png" sizes="16x16" type="image/x-icon" />
+
+  <link rel="stylesheet" href="./style_contact.css" />
+  <!-- Font Awesome for social icons (optional, add if needed) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/logo/GreenBite-Logo.png" alt="GreenBite Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./recipes.html">Recipes</a></li>
+        <li><a href="./calculator.html">Calorie Calculator</a></li>
+        <li><a href="./workout.html">Workout Generator</a></li>
+        <li><a href="./mindfulness.html">Mindfulness</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+    </section>
+
+    <!-- Main Contact Content -->
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError">Please enter your name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError">Please enter a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="error" id="messageError">Please enter your message</div>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        
+        <div class="confirmation" id="confirmation">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info-content">
+            <h3>Address</h3>
+            <p>542 Peradeniya Rd, Kandy 20000</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="info-content">
+            <h3>Phone</h3>
+            <p>0776345808</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info-content">
+            <h3>Email</h3>
+            <p>GreenBite@gmail.com</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="info-content">
+            <h3>Business Hours</h3>
+            <p>Monday-Friday: 9am-5pm</p>
+            <p>Saturday: 10am-2pm</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Map Section -->
+    <div class="contact-container">
+      <div class="map-container">
+        <h2>Find Us Here</h2>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.646098016566!2d80.61746657483899!3d7.281047492726198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3673f5e22ab3b%3A0xcbaef11262bec73!2sAPIIT%20Kandy%20Campus!5e0!3m2!1sen!2slk!4v1758465146023!5m2!1sen!2slk" width="600" height="450"  allowfullscreen="" loading="lazy" title="GreenBite Location Map"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="contact-container">
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            How quickly do you respond to messages? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            We typically respond to all messages within 24-48 hours during business days. For urgent matters, please call us directly.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer custom meal plans? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, we offer personalized meal plans based on your dietary needs and goals. Please contact us with your specific requirements.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I schedule a consultation? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Absolutely! We offer both in-person and virtual consultations. Please contact us to schedule an appointment.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Where can I find nutritional information for your recipes? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            All our recipes include detailed nutritional information. You can find this below each recipe on our website.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer corporate wellness programs? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, we provide customized corporate wellness programs. Contact us for more information and pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Visit our Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="#" aria-label="Visit our Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Visit our Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <nav class="page-links" aria-label="Footer navigation">
+        <a href="./home.html">Home</a>
+        <a href="./recipes.html">Recipes</a>
+        <a href="./calculator.html">Calorie Calculator</a>
+        <a href="./mindfulness.html">Mindfulness</a>
+        <a href="./workout.html">Workout Generator</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="newsletter">
+        <h3>STAY CONNECTED</h3>
+        <form id="newsletterForm">
+          <label for="emailInput" class="visually-hidden">Enter your email</label>
+          <input type="email" id="emailInput" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="copyright">
+        © 2025 GreenBite. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', 
+        hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+    });
+
+    // Form validation and submission
+    const feedbackForm = document.getElementById('feedbackForm');
+    const confirmation = document.getElementById('confirmation');
+    
+    feedbackForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset error messages
+      document.querySelectorAll('.error').forEach(error => {
+        error.style.display = 'none';
+      });
+      
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      let isValid = true;
+      
+      // Validate name
+      if (name === '') {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Validate email
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Validate message
+      if (message === '') {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (isValid) {
+        // Store in localStorage
+        const feedback = {
+          name,
+          email,
+          message,
+          date: new Date().toISOString()
+        };
+        
+        let feedbacks = JSON.parse(localStorage.getItem('feedbacks')) || [];
+        feedbacks.push(feedback);
+        localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
+        
+        // Show confirmation message
+        confirmation.style.display = 'block';
+        
+        // Reset form
+        feedbackForm.reset();
+        
+        // Hide confirmation after 5 seconds
+        setTimeout(() => {
+          confirmation.style.display = 'none';
+        }, 5000);
+      }
+    });
+
+    // FAQ accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+    
+    // Newsletter form
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        alert(`Thank you for subscribing with: ${email}`);
+        document.getElementById('emailInput').value = '';
+      }
+    });
+  </script>
+</body>
+</html>

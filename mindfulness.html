@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBite</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logo/favicon-32x32.png" type="image/x-icon" />
+  <link rel="icon" href="./images/logo/favicon-16x16.png" sizes="16x16" type="image/x-icon" />
+
+  <link rel="stylesheet" href="./style_mindful.css" />
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./images/logo/GreenBite-Logo.png" alt="GreenBite Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./recipes.html">Recipes</a></li>
+      <li><a href="./calculator.html">Calorie Calculator</a></li>
+      <li><a href="./workout.html">Workout Generator</a></li>
+      <li><a href="./mindfulness.html">Mindfulness</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+ 
+
+   <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+   <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Inner Peace</h1>
+      <p>Take a moment to breathe, focus, and reconnect with yourself through guided mindfulness practices.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Breathing Animation Section -->
+    <section class="breathing-container">
+      <h2 class="section-title">Guided Breathing</h2>
+      <div class="breathing-circle" id="breathing-circle">
+        <span id="breath-text">Breathe In</span>
+      </div>
+      <p class="breathing-instructions" id="breath-instruction">Click the circle to begin. Inhale for 4 seconds, exhale for 6 seconds.</p>
+      <div class="timer-buttons">
+        <button class="timer-btn primary-btn" id="start-breathing">Start</button>
+        <button class="timer-btn secondary-btn" id="reset-breathing">Reset</button>
+      </div>
+    </section>
+
+    <!-- Timer Section -->
+    <h2 class="section-title">Meditation Timer</h2>
+    <div class="timer-section">
+      <div class="timer-container">
+        <h3>Meditation Session</h3>
+        <div class="timer-display" id="meditation-timer">10:00</div>
+        <div class="timer-options">
+          <button class="option-btn" data-time="300">5 Min</button>
+          <button class="option-btn active" data-time="600">10 Min</button>
+          <button class="option-btn" data-time="900">15 Min</button>
+          <button class="option-btn" data-time="1800">30 Min</button>
+        </div>
+        <div class="timer-buttons">
+          <button class="timer-btn primary-btn" id="start-meditation">Start</button>
+          <button class="timer-btn secondary-btn" id="pause-meditation">Pause</button>
+          <button class="timer-btn secondary-btn" id="reset-meditation">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Sounds Section -->
+    <section class="sounds-container">
+      <h2 class="section-title">Sounds To Calm Your Mind</h2>
+      <div class="sound-options">
+        <div class="sound-btn" data-sound="rain">
+          <i class="fas fa-cloud-rain sound-icon"></i>
+          <span>Rain</span>
+        </div>
+        <div class="sound-btn" data-sound="forest">
+          <i class="fas fa-tree sound-icon"></i>
+          <span>Forest</span>
+        </div>
+        <div class="sound-btn" data-sound="waves">
+          <i class="fas fa-water sound-icon"></i>
+          <span>Ocean</span>
+        </div>
+      </section>
+
+    <!-- Session Tracking -->
+    <section class="sessions-container">
+      <h2 class="section-title">Your Mindfulness Journey</h2>
+      <div class="session-stats">
+        <div class="stat-card">
+          <div class="stat-number" id="total-sessions">0</div>
+          <div class="stat-label">Total Sessions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="total-time">0</div>
+          <div class="stat-label">Minutes Meditated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="current-streak">0</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="page-links">
+        <a href="./home.html">Home</a>
+        <a href="./recipes.html">Recipes</a>
+        <a href="./calculator.html">Calorie Calculator</a>
+        <a href="./mindfulness.html">Mindfulness</a>
+        <a href="./workout.html">Workout Generator</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+
+      <div class="newsletter">
+        <h3>STAY CONNECTED</h3>
+        <form id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="copyright">
+        © 2025 GreenBite. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <audio id="rain-sound" src="./Sounds/calming-rain-257596.mp3" loop></audio>
+  <audio id="forest-sound" src="./Sounds/forest-ambience-296528.mp3" loop></audio>
+  <audio id="waves-sound" src="./Sounds/soothing-ocean-waves-372489.mp3" loop></audio>
+
+  <script>
+    // Breathing Animation
+    const breathingCircle = document.getElementById('breathing-circle');
+    const breathText = document.getElementById('breath-text');
+    const breathInstruction = document.getElementById('breath-instruction');
+    const startBreathingBtn = document.getElementById('start-breathing');
+    const resetBreathingBtn = document.getElementById('reset-breathing');
+    
+    let breathingInterval;
+    let isBreathingActive = false;
+    let isInhalePhase = true;
+    
+    startBreathingBtn.addEventListener('click', function() {
+      if (isBreathingActive) {
+        pauseBreathing();
+        startBreathingBtn.textContent = 'Start';
+      } else {
+        startBreathing();
+        startBreathingBtn.textContent = 'Pause';
+      }
+    });
+    
+    resetBreathingBtn.addEventListener('click', resetBreathing);
+    
+    function startBreathing() {
+      isBreathingActive = true;
+      breathingCircle.classList.add('inhale');
+      breathText.textContent = 'Breathe In';
+      breathInstruction.textContent = 'Inhale...';
+      
+      breathingInterval = setInterval(() => {
+        if (isInhalePhase) {
+          // Switch to exhale
+          breathingCircle.classList.remove('inhale');
+          breathText.textContent = 'Breathe Out';
+          breathInstruction.textContent = 'Exhale...';
+          isInhalePhase = false;
+        } else {
+          // Switch to inhale
+          breathingCircle.classList.add('inhale');
+          breathText.textContent = 'Breathe In';
+          breathInstruction.textContent = 'Inhale...';
+          isInhalePhase = true;
+        }
+      }, 4000); // Change every 4 seconds
+    }
+    
+    function pauseBreathing() {
+      isBreathingActive = false;
+      clearInterval(breathingInterval);
+    }
+    
+    function resetBreathing() {
+      pauseBreathing();
+      breathingCircle.classList.remove('inhale');
+      breathText.textContent = 'Breathe In';
+      breathInstruction.textContent = 'Click the circle to begin. Inhale for 4 seconds, exhale for 6 seconds.';
+      startBreathingBtn.textContent = 'Start';
+      isInhalePhase = true;
+    }
+
+    // Meditation Timer
+    const meditationTimer = document.getElementById('meditation-timer');
+    const startMeditationBtn = document.getElementById('start-meditation');
+    const pauseMeditationBtn = document.getElementById('pause-meditation');
+    const resetMeditationBtn = document.getElementById('reset-meditation');
+    const timeOptions = document.querySelectorAll('.timer-container .option-btn');
+    
+    let meditationTime = 600; // 10 minutes in seconds
+    let meditationInterval;
+    let isMeditationRunning = false;
+    
+    timeOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        timeOptions.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        meditationTime = parseInt(this.dataset.time);
+        updateMeditationTimerDisplay();
+      });
+    });
+    
+    startMeditationBtn.addEventListener('click', startMeditationTimer);
+    pauseMeditationBtn.addEventListener('click', pauseMeditationTimer);
+    resetMeditationBtn.addEventListener('click', resetMeditationTimer);
+    
+    function startMeditationTimer() {
+      if (isMeditationRunning) return;
+      
+      isMeditationRunning = true;
+      meditationInterval = setInterval(() => {
+        if (meditationTime > 0) {
+          meditationTime--;
+          updateMeditationTimerDisplay();
+        } else {
+          clearInterval(meditationInterval);
+          isMeditationRunning = false;
+          alert('Meditation session completed!');
+          updateSessionStats(10); // Assuming 10-minute session
+        }
+      }, 1000);
+    }
+    
+    function pauseMeditationTimer() {
+      clearInterval(meditationInterval);
+      isMeditationRunning = false;
+    }
+    
+    function resetMeditationTimer() {
+      clearInterval(meditationInterval);
+      isMeditationRunning = false;
+      // Reset to the selected option's time
+      const activeOption = document.querySelector('.timer-container .option-btn.active');
+      meditationTime = parseInt(activeOption.dataset.time);
+      updateMeditationTimerDisplay();
+    }
+    
+    function updateMeditationTimerDisplay() {
+      const minutes = Math.floor(meditationTime / 60);
+      const seconds = meditationTime % 60;
+      meditationTimer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    
+    // Ambient Sounds
+const soundButtons = document.querySelectorAll('.sound-btn');
+
+const sounds = {
+  rain: document.getElementById('rain-sound'),
+  forest: document.getElementById('forest-sound'),
+  waves: document.getElementById('waves-sound')
+};
+
+let currentSound = null;
+
+soundButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    const selectedSound = this.dataset.sound;
+
+    // Pause currently playing sound
+    if (currentSound && currentSound !== sounds[selectedSound]) {
+      currentSound.pause();
+      currentSound.currentTime = 0;
+    }
+
+    // Toggle sound on/off
+    if (currentSound === sounds[selectedSound]) {
+      currentSound.pause();
+      currentSound.currentTime = 0;
+      currentSound = null;
+      this.classList.remove('active');
+    } else {
+      // Remove active from all buttons
+      soundButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      currentSound = sounds[selectedSound];
+      currentSound.play();
+    }
+  });
+});
+
+
+    // Session Tracking with localStorage
+    const totalSessionsElement = document.getElementById('total-sessions');
+    const totalTimeElement = document.getElementById('total-time');
+    const currentStreakElement = document.getElementById('current-streak');
+    
+    // Initialize session stats from localStorage or set defaults
+    let sessionStats = JSON.parse(localStorage.getItem('mindfulnessStats')) || {
+      totalSessions: 0,
+      totalMinutes: 0,
+      lastSessionDate: null,
+      currentStreak: 0
+    };
+    
+    function updateSessionStats(minutesMeditated) {
+      // Update stats
+      sessionStats.totalSessions++;
+      sessionStats.totalMinutes += minutesMeditated;
+      
+      // Check if we're continuing a streak
+      const today = new Date().toDateString();
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayString = yesterday.toDateString();
+      
+      if (sessionStats.lastSessionDate === today) {
+        // Already meditated today, don't increase streak
+      } else if (sessionStats.lastSessionDate === yesterdayString) {
+        // Meditated yesterday, continue streak
+        sessionStats.currentStreak++;
+      } else {
+        // Broken streak, reset to 1
+        sessionStats.currentStreak = 1;
+      }
+      
+      sessionStats.lastSessionDate = today;
+      
+      // Save to localStorage
+      localStorage.setItem('mindfulnessStats', JSON.stringify(sessionStats));
+      
+      // Update UI
+      updateStatsDisplay();
+    }
+    
+    function updateStatsDisplay() {
+      totalSessionsElement.textContent = sessionStats.totalSessions;
+      totalTimeElement.textContent = sessionStats.totalMinutes;
+      currentStreakElement.textContent = sessionStats.currentStreak;
+    }
+    
+    // Initialize stats display
+    updateStatsDisplay();
+
+    // Newsletter form
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        alert(`Thank you for subscribing with: ${email}`);
+        document.getElementById('emailInput').value = '';
+      }
+    });
+  </script>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+  
+
+ 
+  
+</body>
+</html>

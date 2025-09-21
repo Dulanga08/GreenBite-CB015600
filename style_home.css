@@ -1,0 +1,477 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(237, 229, 229);
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* === NAVBAR === */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f7f3;
+  padding: 20px 40px;
+  border-bottom: 1px solid #006400;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 80px;
+}
+
+/* Logo styling */
+.logo img {
+  height: 150px;
+  width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #006400;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1100;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #006400;
+  border-radius: 2px;
+  display: block;
+}
+
+/* === VIDEO BACKGROUND === */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+/* === HERO SECTION === */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 190px;
+}
+
+.hero-text h1 {
+  font-size: 76px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 24px;
+  color: #004400;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  border-bottom: 1px solid #004400;
+}
+
+/* === DAILY TIP === */
+.daily-tip-section {
+  background-color: #f2f9f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tip-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.daily-tip-section h2 {
+  color: #006400;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.daily-tip-section p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === WELLNESS SECTION === */
+.wellness-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 80px;
+  background-color: #fff;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+
+.wellness-text {
+  flex: 1;
+  color: #333;
+}
+
+.wellness-text h2 {
+  font-size: 36px;
+  color: #006400;
+  margin-bottom: 10px;
+}
+
+.wellness-text hr {
+  border: none;
+  border-top: 2px solid #006400;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.wellness-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #006400;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  border-bottom: 1px solid #006400;
+}
+
+.wellness-image {
+  flex: 1;
+}
+
+.wellness-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* === CARDS SECTION === */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: #f2f9f4;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+  padding: 20px;
+  color: #000;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 64, 32, 0.6);
+  color: white;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #0e2f1c;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #a3d9b1;
+}
+
+.page-links {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.page-links a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.page-links a:hover {
+  color: #a3d9b1;
+}
+
+.newsletter {
+  margin: 30px 0;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter h3 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter input[type="email"] {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  background-color: white;
+  color: #0e2f1c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.newsletter button:hover {
+  background-color: #f0f0f0;
+}
+
+.copyright {
+  margin-top: 25px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .logo img {
+    height: 100px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background-color: #f8f7f3;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    z-index: 1001;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding-bottom: 100px;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: 2px solid #004400;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  /* Wellness Section */
+  .wellness-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .wellness-image img {
+    border-radius: 10px;
+  }
+
+  /* Cards Section */
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    border-radius: 10px;
+    height: auto;
+  }
+  
+  /* Footer adjustments */
+  .page-links {
+    flex-direction: column;
+  }
+  
+  .newsletter form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+  }
+}

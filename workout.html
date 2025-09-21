@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Generator</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logo/favicon-32x32.png" type="image/x-icon" />
+  <link rel="icon" href="./images/logo/favicon-16x16.png" sizes="16x16" type="image/x-icon" />
+
+  <link rel="stylesheet" href="./style_workout.css">
+  <script src="workout.js" defer></script>
+
+
+<body class="homebackgroud">
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./images/logo/GreenBite-Logo.png" alt="GreenBite Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./recipes.html">Recipes</a></li>
+      <li><a href="./calculator.html">Calorie Calculator</a></li>
+      <li><a href="./workout.html">Workout Generator</a></li>
+      <li><a href="./mindfulness.html">Mindfulness</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+ 
+
+   <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+
+
+  <section class="hero-image">
+    <div class="hero-slogan">Train Smart. Sweat Hard. Live Fit.</div>
+  </section>
+
+  <main>
+    <div class="workout-generator-container">
+      <h2>Generate Your Workout</h2>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="body-part">Target Body Part</label>
+          <select id="body-part">
+            <option value="full">Full Body</option>
+            <option value="arms">Arms</option>
+            <option value="legs">Legs</option>
+            <option value="core">Core</option>
+            <option value="chest">Chest</option>
+            <option value="back">Back</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="equipment">Equipment</label>
+          <select id="equipment">
+            <option value="none">None</option>
+            <option value="dumbbells">Dumbbells</option>
+            <option value="resistance">Resistance Bands</option>
+          </select>
+        </div>
+
+        <button id="generate-button">Generate Workout</button>
+      </div>
+
+      <div class="workout-display" id="workout-display">
+        <p>Your workout will appear here after you click "Generate Workout"</p>
+      </div>
+    </div>
+
+    <div class="timer-container">
+      <h3>Workout Timer</h3>
+      <p id="exercise-label">Exercise: <span id="current-exercise">None</span></p>
+      <div id="timer">00:00</div>
+      <div class="timer-buttons">
+        <button id="start-button">Start Timer</button>
+        <button id="reset-button">Reset</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="wellness-section">
+    <div class="wellness-text">
+      <h2>Tailored Fitness Plans Made Easye</h2>
+      <hr>
+      <p>
+       At GreenBite, we know that staying active is key to a healthy lifestyle, but finding the right workout can be overwhelming.
+        Our Workout Generator creates personalized exercise routines tailored to your fitness level, goals, and schedule. 
+        Whether you’re a beginner or an experienced athlete, this tool helps you stay motivated and make every workout count—building strength,
+         endurance, and confidence one step at a time.
+      </p>
+      
+    </div>
+    <div class="wellness-image">
+      <img src="./images/recepies/worksecimg (1).jpg" alt="Wellness Image">
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="page-links">
+        <a href="./home.html">Home</a>
+        <a href="./recipes.html">Recipes</a>
+        <a href="./calculator.html">Calorie Calculator</a>
+        <a href="./mindfulness.html">Mindfulness</a>
+        <a href="./workout.html">Workout Generator</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+
+      <div class="newsletter">
+        <h3>STAY CONNECTED</h3>
+        <form id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="copyright">
+        © 2025 GreenBite. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
